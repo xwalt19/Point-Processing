@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from google.colab import files
+from io import BytesIO
+from PIL import Image
+
+print("Silakan unggah gambar untuk efek Nonlinear Raise Contrast...")
+uploaded = files.upload()
+
+if len(uploaded.keys()) > 0:
+    file_name = list(uploaded.keys())[0]
+    image_data = uploaded[file_name]
+    
+    image_pil = Image.open(BytesIO(image_data))
+    original_image = np.array(image_pil)
+    if original_image.shape[2] == 4:
+        original_image = original_image[:, :, :3]
+        
+    # --- Proses Nonlinear Raise Contrast ---
+    img_float = original_image.astype(np.float32)
+    nl_raise_contrast_image = np.clip(((img_float / 255.0) ** 0.5) * 255.0, 0, 255).astype(np.uint8)
+
+    # --- Tampilkan Hasil Nonlinear Raise Contrast Saja ---
+    plt.figure(figsize=(8, 8))
+    plt.imshow(nl_raise_contrast_image)
+    plt.title('Hasil: Nonlinear Raise Contrast')
+    plt.axis('off')
+    plt.show()
