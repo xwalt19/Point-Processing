@@ -1,58 +1,46 @@
-Image Point Processing Scripts 🖼️
-Koleksi skrip Python sederhana untuk melakukan operasi point processing dasar pada gambar. Setiap skrip dirancang untuk berjalan secara mandiri di lingkungan Google Colab.
+# Pengolahan Citra Dasar: Operasi Titik (Point Processing)
 
-Deskripsi
-Proyek ini berisi beberapa skrip individual di mana setiap skrip menerapkan satu jenis transformasi piksel pada gambar yang diunggah oleh pengguna. Tujuannya adalah untuk mendemonstrasikan efek dari berbagai operasi matematika dasar pada data citra digital.
+Proyek ini adalah eksplorasi teknik dasar olah citra digital *Point Processing*. Kita belajar cara memanipulasi nilai angka tiap piksel secara mandiri dengan rumus matematika menggunakan Python untuk mengubah kecerahan, kontras, dan lainnya. Proyek ini mencakup dari praktik koding hingga pemahaman teorinya.
 
-Setiap skrip akan:
 
-Meminta pengguna untuk mengunggah sebuah file gambar.
 
-Memproses gambar tersebut sesuai dengan fungsinya.
+---
 
-Menampilkan gambar hasil olahan.
+## ✨ Efek yang Dibahas
 
-Fitur dan Efek yang Tersedia ✨
-Berikut adalah daftar efek point processing yang telah diimplementasikan:
+Berikut adalah daftar efek pemrosesan gambar yang diimplementasikan dalam proyek ini:
 
-Original: Menampilkan gambar asli tanpa perubahan.
+-   **Original**: Menampilkan gambar asli tanpa perubahan.
+-   **Darken**: Menggelapkan gambar dengan mengurangi nilai piksel.
+-   **Lighten**: Mencerahkan gambar dengan menambah nilai piksel.
+-   **Invert**: Membalikkan warna gambar seperti klise film.
+-   **Lower Contrast**: Menurunkan kontras gambar agar terlihat lebih pudar.
+-   **Raise Contrast**: Menaikkan kontras gambar agar lebih tajam.
+-   **Nonlinear Lower/Raise Contrast**: Mengubah kontras secara halus menggunakan kurva (rumus pangkat).
 
-Darken: Mengurangi intensitas kecerahan setiap piksel secara merata.
+---
 
-Lighten: Menambah intensitas kecerahan setiap piksel secara merata.
+## 🛠️ Teknologi yang Digunakan
 
-Invert: Membalikkan nilai warna setiap piksel untuk menciptakan efek negatif film.
+-   **Python**: Bahasa pemrograman utama.
+-   **Google Colab**: Lingkungan untuk menjalankan kode secara interaktif.
+-   **NumPy**: Untuk operasi matematika dan manipulasi array piksel.
+-   **Matplotlib**: Untuk menampilkan hasil gambar.
+-   **Pillow (PIL)**: Untuk membaca dan menangani data gambar.
 
-Lower Contrast: Mengurangi rentang antara area gelap dan terang (linear).
+---
 
-Raise Contrast: Meningkatkan rentang antara area gelap dan terang (linear).
+## 🚀 Cara Menggunakan
 
-Nonlinear Lower Contrast: Mengurangi kontras menggunakan koreksi gamma (gamma>1.0).
+Proyek ini terdiri dari beberapa skrip individual untuk setiap efek.
 
-Nonlinear Raise Contrast: Meningkatkan kontras menggunakan koreksi gamma (gamma<1.0).
+1.  **Salin Kode**: Ambil salah satu blok kode efek yang diinginkan.
+2.  **Jalankan di Colab**: Tempelkan kode ke dalam sel di Google Colab dan jalankan.
+3.  **Unggah Gambar**: Anda akan diminta untuk memilih dan mengunggah sebuah file gambar dari komputer Anda.
+4.  **Lihat Hasil**: Hasil gambar yang telah diproses akan langsung ditampilkan sebagai output dari sel tersebut.
 
-Cara Penggunaan 🚀
-Setiap skrip di repositori ini dapat dijalankan secara terpisah.
+---
 
-Pilih Efek: Tentukan efek mana yang ingin Anda coba.
+## 🧠 Konsep Utama
 
-Buka Google Colab: Kunjungi colab.research.google.com dan buat notebook baru.
-
-Salin Kode: Salin seluruh kode dari skrip yang Anda pilih (misalnya, kode untuk efek Darken).
-
-Tempel & Jalankan: Tempelkan kode tersebut ke dalam sebuah sel di Google Colab, lalu jalankan sel dengan menekan tombol Play (▶️) atau Ctrl+Enter.
-
-Unggah Gambar: Saat diminta, klik tombol Choose Files dan pilih sebuah gambar dari komputer Anda.
-
-Lihat Hasil: Hasil gambar yang telah diproses akan ditampilkan di output sel.
-
-Teknologi yang Digunakan 🛠️
-Python 3
-
-Google Colab
-
-NumPy: Untuk operasi numerik pada array piksel.
-
-Matplotlib: Untuk menampilkan gambar.
-
-Pillow (PIL): Untuk membaca data gambar yang diunggah.
+Proyek ini berpusat pada **Operasi Titik (Point Processing)**, di mana setiap piksel pada gambar dimodifikasi secara individual berdasarkan nilainya sendiri, tanpa dipengaruhi oleh piksel tetangganya. Semua transformasi visual dicapai melalui operasi matematika sederhana pada nilai-nilai piksel tersebut.
